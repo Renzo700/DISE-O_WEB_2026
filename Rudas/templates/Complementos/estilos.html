@@ -1,0 +1,67 @@
+    <style>
+        [data-theme="dark"] {
+            --bg-main: #0b0e14;
+            --bg-card: #121620;
+            --border-color: #1f2533;    
+            --text-main: #e1e1e1;
+            --text-muted: #6a7282;
+            --accent: #5efce8;
+            --accent-btn-text: #000000;
+            --sidebar-active-bg: rgba(94, 252, 232, 0.08);
+            --sidebar-link-color: #9499a7;
+        }
+
+        [data-theme="light"] {
+            --bg-main: #f4f6f9;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent: #0f172a;
+            --accent-btn-text: #ffffff;
+            --sidebar-active-bg: rgba(15, 23, 42, 0.05);
+            --sidebar-link-color: #475569;
+        }
+
+        body {
+            background: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            min-height: 100vh;
+            transition: 0.3s;
+        }
+
+        nav, main, div, table, tr, td, th, a, p, h1, h2, h3, h4 {
+            transition: .3s;
+        }
+
+        .sidebar-link {
+            text-decoration: none;
+            color: var(--sidebar-link-color);
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .sidebar-link:hover {
+            background: var(--sidebar-active-bg);
+            color: #5efce8;
+        }
+
+        .active-link {
+            background: var(--sidebar-active-bg);
+            color: #5efce8 !important;
+            font-weight: 700;
+        }
+
+        .card-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 25px;
+        }
+    </style>

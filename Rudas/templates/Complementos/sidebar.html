@@ -1,0 +1,98 @@
+{% load static %}
+<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+    <div class="sidebar-brand">
+        <a href="{% url 'inicio_panel' %}" class="brand-link">
+            <img src="{% static 'assets/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow" />
+            <span class="brand-text fw-light">Inicio Panel</span>
+            </a>
+        </div>
+    <div class="sidebar-wrapper">
+        <nav class="mt-2">
+            <div class="px-3 pb-2">
+                <a href="#" class="btn btn-sm btn-outline-light w-100 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    Ver documentación   
+                </a>
+            </div>
+
+            <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="navigation" aria-label="Main navigation" data-accordion="false" id="navigation">
+
+                <li class="nav-header">ADMINISTRACIÓN</li>
+
+                <li class="nav-item">
+                    <a href="{% url 'inicio_panel' %}" class="nav-link {% if request.resolver_match.url_name == 'inicio_panel' %}active{% endif %}">
+                        <i class="nav-icon bi bi-speedometer2"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'usuario' %}" class="nav-link {% if request.resolver_match.url_name == 'usuario' %}active{% endif %}">
+                        <i class="nav-icon bi bi-people-fill"></i>
+                        <p>Usuarios</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'inventario' %}" class="nav-link {% if request.resolver_match.url_name == 'inventario' %}active{% endif %}">
+                        <i class="nav-icon bi bi-box-seam-fill"></i>
+                        <p>Inventario</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'ventas' %}" class="nav-link {% if request.resolver_match.url_name == 'ventas' %}active{% endif %}">
+                        <i class="nav-icon bi bi-cart-fill"></i>
+                        <p>Ventas</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'categorias' %}" class="nav-link {% if request.resolver_match.url_name == 'categorias' %}active{% endif %}">
+                        <i class="nav-icon bi bi-tags-fill"></i>
+                        <p>Categorías</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'marcas' %}" class="nav-link {% if request.resolver_match.url_name == 'marcas' %}active{% endif %}">
+                        <i class="nav-icon bi bi-bookmark-star-fill"></i>
+                        <p>Marcas</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'proveedores' %}" class="nav-link {% if request.resolver_match.url_name == 'proveedores' %}active{% endif %}">
+                        <i class="nav-icon bi bi-truck"></i>
+                        <p>Proveedores</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'metodos_pago' %}" class="nav-link {% if request.resolver_match.url_name == 'metodos_pago' %}active{% endif %}">
+                        <i class="nav-icon bi bi-credit-card-2-back-fill"></i>
+                        <p>Métodos de Pago</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'descuentos' %}" class="nav-link {% if request.resolver_match.url_name == 'descuentos' %}active{% endif %}">
+                        <i class="nav-icon bi bi-percent"></i>
+                        <p>Descuentos</p>
+                    </a>
+                </li>
+
+                <li class="nav-header">SESIÓN</li>
+
+                <li class="nav-item">
+                    <a href="{% url 'cerrar' %}" class="nav-link">
+                        <i class="nav-icon bi bi-box-arrow-right text-danger"></i>
+                        <p class="text-danger">Cerrar Sesión</p>
+                    </a>
+                </li>
+                
+
+            </ul>
+            </nav>
+    </div>
+    </aside>

@@ -1,0 +1,6 @@
+{
+    "window.density.editorTabHeight": "default",
+    "workbench.editor.autoLockGroups": {
+        "terminalEditor": false
+    }
+}
