@@ -85,6 +85,12 @@ def AD_descuentos(request):
 
     return render(request, 'AD_descuentos.html')
 
+def configuración_view(request):
+    if not request.user.is_authenticated:
+        return redirect('home')
+
+    return render(request, 'Complementos/configuración.html')
+
 def cerrar_sesion(request):
     from django.contrib.auth import logout
     logout(request)
